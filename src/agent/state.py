@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from .constants import ProductType, FinancingType
 
 @dataclass
@@ -20,4 +20,4 @@ class State:
     asIsValue: float = 400000
     productCode: ProductType = ProductType.Value_Add
     financingType: FinancingType = FinancingType.Purchase
-    pricingEngineParams: dict = {}
+    pricingEngineParams: dict = field(default_factory=dict)
