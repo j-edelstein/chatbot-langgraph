@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
-
+from .constants import ProductType, FinancingType
 
 @dataclass
 class State:
@@ -14,4 +14,10 @@ class State:
     for more information.
     """
 
-    changeme: str = "example"
+    propertyAddress: str = "123 Main St, Anytown, USA"
+    propertyType: str = "Single Family Home"
+    purchasePrice: float = 500000
+    asIsValue: float = 400000
+    productCode: ProductType = ProductType.Value_Add
+    financingType: FinancingType = FinancingType.Purchase
+    pricingEngineParams: dict = {}
